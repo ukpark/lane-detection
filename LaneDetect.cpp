@@ -47,6 +47,7 @@ Notes:
 #define PI 3.1415926
 
 using namespace cv;
+using namespace std;
 
 int main(int argc, char* argv[]) {
 	int houghVote = 200;
@@ -78,10 +79,10 @@ int main(int argc, char* argv[]) {
                 break;
             	Mat gray;
             	cvtColor(image,gray,CV_RGB2GRAY);
-            	vector<string> codes;
-            	Mat corners;
-            	findDataMatrix(gray, codes, corners);
-            	drawDataMatrixCodes(image, codes, corners);
+            	//vector<string> codes;
+            	//Mat corners;
+            	//findDataMatrix(gray, codes, corners);
+            	//drawDataMatrixCodes(image, codes, corners);
 
 		Rect roi(0,image.cols/3,image.cols-1,image.rows - image.cols/3);// set the ROI for the image
 		Mat imgROI = image(roi);
